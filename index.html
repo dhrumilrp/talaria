@@ -87,10 +87,16 @@
   .complement p{font-size:18px}
 
   /* about */
-  .about{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;max-width:820px}
-  .mono{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;background:var(--paper);box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--rule)}
-  .about h2{font-size:32px;margin-bottom:4px}
-  .about .role{color:var(--ink);font-weight:500;margin-bottom:18px}
+  .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .team-card{border-top:2px solid var(--gold);padding-top:24px}
+  .team-card h3{font-size:27px;line-height:1.2;margin-bottom:12px}
+  .team-card .role{color:var(--ink);font-weight:500;margin-bottom:16px}
+  .team-experience{margin-top:40px;padding-top:24px;border-top:1px solid var(--rule)}
+  .team-experience p{font-size:14px;margin-bottom:18px}
+  .company-logos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center}
+  .company-logos li{height:64px;display:flex;align-items:center;justify-content:center;gap:10px;color:var(--ink);font-weight:600;font-size:20px}
+  .company-logos img{display:block;width:120px;max-width:100%;height:30px;object-fit:contain;filter:grayscale(1);opacity:.8}
+  .company-logos .doordash img{width:34px;height:24px}
 
   /* contact */
   .contact{background:var(--ink);color:#DCE6EA}
@@ -123,8 +129,8 @@
     section{padding:64px 0}
     .care li{grid-template-columns:1fr;gap:4px}
     .steps{grid-template-columns:1fr;gap:28px}
-    .about{grid-template-columns:1fr;gap:20px}
-    .mono{width:96px;height:96px}
+    .team-grid{grid-template-columns:1fr;gap:32px}
+    .company-logos{grid-template-columns:repeat(2,1fr);gap:16px}
     .head-call span{display:none}
   }
 </style>
@@ -210,13 +216,30 @@
 
   <section id="about">
     <div class="wrap">
-      <div class="about">
-        <img class="mono" src="tarun-bajwa.jpg" width="120" height="120" alt="Dr. Tarun Bajwa">
-        <div>
-          <h2>Dr. Tarun Bajwa, DPM</h2>
-          <p class="role">Podiatrist and co-founder</p>
-          <p>Dr. Bajwa is a Houston podiatrist who co-founded Talaria Med to make regular foot care easier for the residents of long-term care and skilled nursing communities, and for the teams who care for them.</p>
+      <div class="section-head">
+        <h2>Meet the Team</h2>
+        <p>Clinical care and technology experience, working together to make foot care easier.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Lead Podiatrist</h3>
+          <p class="role">Greater Houston Area</p>
+          <p>Our lead podiatrist provides care in the Greater Houston Area, helping residents of skilled nursing and long-term care communities get consistent foot care at their facility.</p>
         </div>
+        <div class="team-card">
+          <h3>Product &amp; Technology</h3>
+          <p class="role">Two leads · Over 20 years of combined experience</p>
+          <p>Our technical and product leads bring over 20 years of combined experience from LinkedIn, Meta, DoorDash, and PayPal to help make coordinating care simpler for facilities and providers.</p>
+        </div>
+      </div>
+      <div class="team-experience">
+        <p>Our product and technology team brings experience from</p>
+        <ul class="company-logos" aria-label="Previous company experience">
+          <li><img src="assets/logos/linkedin.png" alt="LinkedIn" width="120" height="30"></li>
+          <li><img src="assets/logos/meta.svg" alt="Meta" width="120" height="30"></li>
+          <li class="doordash"><img src="assets/logos/doordash.svg" alt="" width="34" height="24"><span>DoorDash</span></li>
+          <li><img src="assets/logos/paypal.png" alt="PayPal" width="120" height="30"></li>
+        </ul>
       </div>
     </div>
   </section>
